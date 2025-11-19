@@ -1,0 +1,74 @@
+.settings-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.settings-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  border: 1px solid #f1f3f5;
+}
+
+.settings-card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  background: #e9ecef;
+}
+
+.badge-success {
+  background: #d3f9d8;
+  color: #2b8a3e;
+}
+
+.settings-card .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.settings-card select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+  font-size: 1rem;
+}
+
+.settings-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-danger {
+  background: #ff6b6b;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background: #fa5252;
+}
+
+@media (max-width: 768px) {
+  .settings-page {
+    padding: 15px;
+  }
+}
+

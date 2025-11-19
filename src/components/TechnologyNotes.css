@@ -1,0 +1,35 @@
+.notes-section {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.notes-section h4 {
+  margin: 0 0 8px 0;
+  color: #555;
+  font-size: 0.9em;
+}
+
+.notes-textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 0.85em;
+  resize: vertical;
+  min-height: 60px;
+  font-family: inherit;
+  cursor: text; /* 🔥 Меняем курсор на текстовый */
+}
+
+.notes-textarea:focus {
+  outline: none;
+  border-color: #4ecdc4;
+}
+
+.notes-hint {
+  font-size: 0.75em;
+  color: #888;
+  margin-top: 5px;
+  text-align: right;
+}

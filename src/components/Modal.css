@@ -1,0 +1,110 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 95vw;
+  width: min(640px, 95vw);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease;
+}
+
+.modal-small,
+.modal-medium,
+.modal-large {
+  width: min(640px, 95vw);
+}
+
+.modal-full {
+  width: 95vw;
+  height: 95vh;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px 0;
+  margin-bottom: 16px;
+}
+
+.modal-title {
+  margin: 0;
+  color: #333;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.modal-close-btn:hover {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.modal-body {
+  padding: 0 24px 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* 🔥 Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { 
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 🔥 Адаптивность */
+@media (max-width: 768px) {
+  .modal-small,
+  .modal-medium,
+  .modal-large {
+    width: 95vw;
+    max-width: 95vw;
+  }
+  
+  .modal-header {
+    padding: 16px 20px 0;
+  }
+  
+  .modal-body {
+    padding: 0 20px 20px;
+  }
+}

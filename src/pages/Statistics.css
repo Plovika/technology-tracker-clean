@@ -1,0 +1,141 @@
+.statistics-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.statistics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  border: 1px solid #f1f3f5;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #868e96;
+}
+
+.stat-value {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 8px 0;
+  color: #212529;
+}
+
+.stat-value.success {
+  color: #51cf66;
+}
+
+.stat-value.info {
+  color: #4ecdc4;
+}
+
+.stat-value.warning {
+  color: #ff6b6b;
+}
+
+.chart-card,
+.insights-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+  margin-bottom: 30px;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.chart-header h2 {
+  margin: 0;
+}
+
+.chart-score {
+  text-align: right;
+}
+
+.chart-score strong {
+  display: block;
+  font-size: 2rem;
+  color: #4ecdc4;
+}
+
+.progress-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+  min-height: 220px;
+}
+
+.chart-bar {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.bar-fill {
+  width: 100%;
+  border-radius: 12px 12px 4px 4px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 12px;
+  min-height: 6px;
+  transition: height 0.4s ease;
+}
+
+.bar-value {
+  color: #fff;
+  font-weight: 600;
+}
+
+.bar-label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+.insights-card ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #495057;
+}
+
+.insights-card li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .statistics-page {
+    padding: 16px;
+  }
+
+  .chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .chart-score {
+    text-align: left;
+  }
+
+  .progress-chart {
+    gap: 16px;
+  }
+}
+

@@ -1,0 +1,104 @@
+.progress-bar {
+  background: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 🔥 Размеры */
+.progress-small {
+  height: 8px;
+}
+
+.progress-medium {
+  height: 16px;
+}
+
+.progress-large {
+  height: 24px;
+}
+
+/* 🔥 Цвета */
+.progress-primary .progress-fill {
+  background: linear-gradient(90deg, #4ecdc4, #45b7d1);
+}
+
+.progress-success .progress-fill {
+  background: linear-gradient(90deg, #51cf66, #40c057);
+}
+
+.progress-warning .progress-fill {
+  background: linear-gradient(90deg, #ffd43b, #fab005);
+}
+
+.progress-danger .progress-fill {
+  background: linear-gradient(90deg, #ff6b6b, #fa5252);
+}
+
+.progress-purple .progress-fill {
+  background: linear-gradient(90deg, #cc5de8, #be4bdb);
+}
+
+/* 🔥 Заполнение */
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 8px;
+}
+
+/* 🔥 Анимация полосок */
+.progress-striped .progress-fill {
+  background-size: 30px 30px;
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+}
+
+.progress-animated.progress-striped .progress-fill {
+  animation: progressStripes 1s linear infinite;
+}
+
+@keyframes progressStripes {
+  0% { background-position: 0 0; }
+  100% { background-position: 30px 0; }
+}
+
+/* 🔥 Подписи */
+.progress-label-inside {
+  color: white;
+  font-size: 0.75em;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+}
+
+.progress-label-outside {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+  font-weight: 500;
+}
+
+/* 🔥 Адаптивность */
+@media (max-width: 768px) {
+  .progress-large {
+    height: 20px;
+  }
+  
+  .progress-label-inside {
+    font-size: 0.7em;
+  }
+}

@@ -1,0 +1,61 @@
+.roadmap-import-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.roadmap-import-page .page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+  color: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.roadmap-import-page .page-header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.roadmap-import-page .page-header p {
+  margin: 8px 0 0 0;
+  max-width: 480px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.roadmap-import-content {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 30px;
+}
+
+.import-panel,
+.import-results {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e9ecef;
+}
+
+.import-results h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #1f2933;
+}
+
+.app-loading.compact {
+  min-height: 160px;
+}
+
+@media (max-width: 960px) {
+  .roadmap-import-content {
+    grid-template-columns: 1fr;
+  }
+}
+

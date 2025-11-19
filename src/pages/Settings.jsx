@@ -1,0 +1,81 @@
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useTechnologies } from '../hooks/useTechnologies';
+import { useAuth } from '../context/AuthContext';
+import './Settings.css';
+
+function Settings() {
+  const { updateAllStatuses, resetToInitial, exportData } = useTechnologies();
+  const { user, logout } = useAuth();
+  const [statusPreset, setStatusPreset] = useState('not-started');
+
+  const handleMassUpdate = () => {
+    updateAllStatuses(statusPreset);
+  };
+
+  return (
+    <div className="page settings-page">
+      <nav className="breadcrumbs">
+        <Link to="/">Главная</Link>
+        <span> / </span>
+        <span>Настройки</span>
+      </nav>
+
+      <div className="page-header">
+        <div className="header-content">
+          <h1>⚙️ Настройки приложения</h1>
+          <p>Управляйте предпочтениями и данными трекера</p>
+        </div>
+        <Link to="/statistics" className="btn btn-secondary">
+          ← К статистике
+        </Link>
+      </div>
+
+      <div className="settings-grid">
+        <section className="settings-card">
+          <header>
+            <h2>Пользователь</h2>
+            <span className="badge badge-success">Авторизован</span>
+          </header>
+          <p>Вы вошли как <strong>{user?.name || 'Администратор'}</strong>.</p>
+          <button className="btn btn-outline" onClick={logout}>
+            🚪 Выйти
+          </button>
+        </section>
+
+        <section className="settings-card">
+          <header>
+            <h2>Управление данными</h2>
+          </header>
+          <div className="form-group">
+            <label htmlFor="statusPreset">Массовый статус</label>
+            <select
+              id="statusPreset"
+              value={statusPreset}
+              onChange={(e) => setStatusPreset(e.target.value)}
+            >
+              <option value="not-started">⏳ Не начато</option>
+              <option value="in-progress">🔄 В процессе</option>
+              <option value="completed">✅ Завершено</option>
+            </select>
+            <button className="btn btn-primary" onClick={handleMassUpdate}>
+              Обновить все технологии
+            </button>
+          </div>
+
+          <div className="settings-actions">
+            <button className="btn btn-secondary" onClick={exportData}>
+              💾 Экспорт данных
+            </button>
+            <button className="btn btn-danger" onClick={resetToInitial}>
+              ♻️ Сбросить к начальным данным
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+}
+
+export default Settings;
+

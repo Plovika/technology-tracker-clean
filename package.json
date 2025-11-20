@@ -1,9 +1,8 @@
 {
-  "name": "technology-tracker-main-2",
+  "name": "technology-tracker",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://pavelfarniev.github.io/technology-tracker-main-2/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,7 +11,6 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^7.9.6"

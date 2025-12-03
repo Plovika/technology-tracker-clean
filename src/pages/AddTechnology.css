@@ -1,145 +1,145 @@
 .add-technology-page {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .breadcrumbs {
-  margin-bottom: 25px;
-  font-size: 0.9em;
-  color: var(--text-muted);
+    margin-bottom: 25px;
+    font-size: 0.9em;
+    color: var(--text-muted);
 }
 
 .breadcrumbs a {
-  color: var(--accent-primary);
-  text-decoration: none;
+    color: var(--accent-primary);
+    text-decoration: none;
 }
 
 .breadcrumbs a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .breadcrumbs span {
-  margin: 0 8px;
+    margin: 0 8px;
 }
 
 .add-technology-form {
-  background: var(--surface-color);
-  border-radius: 16px;
-  padding: 32px;
-  box-shadow: var(--card-shadow);
+    background: var(--surface-color);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: var(--card-shadow);
 }
 
 .form-header h1 {
-  margin: 0 0 8px;
-  font-size: 2rem;
-  color: var(--text-primary);
+    margin: 0 0 8px;
+    font-size: 2rem;
+    color: var(--text-primary);
 }
 
 .form-header p {
-  margin: 0 0 24px;
-  color: var(--text-muted);
+    margin: 0 0 24px;
+    color: var(--text-muted);
 }
 
 .technology-form {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .form-label {
-  font-weight: 600;
-  color: var(--text-primary);
+    font-weight: 600;
+    color: var(--text-primary);
 }
 
 .form-input,
 .form-textarea,
 .form-select {
-  width: 100%;
-  padding: 14px 16px;
-  border: 2px solid var(--border-color);
-  border-radius: 10px;
-  font-size: 1rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  font-family: inherit;
-  background: var(--input-bg);
-  color: var(--text-primary);
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    font-family: inherit;
+    background: var(--input-bg);
+    color: var(--text-primary);
 }
 
 .form-input:focus,
 .form-textarea:focus,
 .form-select:focus {
-  outline: none;
-  border-color: var(--accent-primary);
-  box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.25);
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.25);
 }
 
 .form-textarea {
-  resize: vertical;
-  min-height: 140px;
+    resize: vertical;
+    min-height: 140px;
 }
 
 .form-select {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .form-hint {
-  font-size: 0.9rem;
-  color: var(--text-muted);
+    font-size: 0.9rem;
+    color: var(--text-muted);
 }
 
 .error {
-  border-color: #ff6b6b !important;
-  background: #fff5f5;
+    border-color: #ff6b6b !important;
+    background: #fff5f5;
 }
 
 .error-message {
-  color: #ff6b6b;
-  font-size: 0.9rem;
+    color: #ff6b6b;
+    font-size: 0.9rem;
 }
 
 .form-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-end;
 }
 
 .btn-outline {
-  border: 2px solid var(--border-color);
-  background: transparent;
-  color: var(--text-primary);
+    border: 2px solid var(--border-color);
+    background: transparent;
+    color: var(--text-primary);
 }
 
 .btn-outline:hover {
-  border-color: var(--accent-primary);
-  color: var(--accent-primary);
-  transform: translateY(-2px);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
-  .add-technology-page {
-    padding: 15px;
-  }
+    .add-technology-page {
+        padding: 15px;
+    }
 
-  .add-technology-form {
-    padding: 24px;
-  }
+    .add-technology-form {
+        padding: 24px;
+    }
 
-  .form-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
 
-  .form-actions .btn {
-    width: 100%;
-    text-align: center;
-  }
+    .form-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
 }
 

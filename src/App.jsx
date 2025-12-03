@@ -15,68 +15,68 @@ import RoadmapImport from './pages/RoadmapImport.jsx';
 import StudyPlan from './pages/StudyPlan.jsx';
 
 function App() {
-  const location = useLocation();
-  const [reloadNoticePath, setReloadNoticePath] = useState(null);
+    const location = useLocation();
+    const [reloadNoticePath, setReloadNoticePath] = useState(null);
 
-  useEffect(() => {
-    const navEntries = performance.getEntriesByType?.('navigation') || [];
-    const navigationEntry = navEntries[0];
-    const isReload = navigationEntry
-      ? navigationEntry.type === 'reload'
-      : performance?.navigation?.type === performance?.navigation?.TYPE_RELOAD;
+    useEffect(() => {
+        const navEntries = performance.getEntriesByType?.('navigation') || [];
+        const navigationEntry = navEntries[0];
+        const isReload = navigationEntry
+            ? navigationEntry.type === 'reload'
+            : performance?.navigation?.type === performance?.navigation?.TYPE_RELOAD;
 
-    if (isReload && window.location.pathname !== '/') {
-      setReloadNoticePath(window.location.pathname);
-    }
-  }, []);
+        if (isReload && window.location.pathname !== '/') {
+            setReloadNoticePath(window.location.pathname);
+        }
+    }, []);
 
-  useEffect(() => {
-    if (location.pathname === '/') {
-      setReloadNoticePath(null);
-    }
-  }, [location.pathname]);
+    useEffect(() => {
+        if (location.pathname === '/') {
+            setReloadNoticePath(null);
+        }
+    }, [location.pathname]);
 
-  return (
-    <AuthProvider>
-      <div className="App">
-        <Navigation />
+    return (
+        <AuthProvider>
+            <div className="App">
+                <Navigation />
 
-        {reloadNoticePath && (
-          <div className="reload-notice">
-            <p>
-              Страница <strong>{reloadNoticePath}</strong> обновлена напрямую. Для корректной работы SPA
-              перейдите на главную и используйте встроенную навигацию.
-            </p>
-            <Link to="/" className="btn btn-primary">
-              ← На главную
-            </Link>
-          </div>
-        )}
+                {reloadNoticePath && (
+                    <div className="reload-notice">
+                        <p>
+                            Страница <strong>{reloadNoticePath}</strong> обновлена напрямую. Для корректной работы SPA
+                            перейдите на главную и используйте встроенную навигацию.
+                        </p>
+                        <Link to="/" className="btn btn-primary">
+                            ← На главную
+                        </Link>
+                    </div>
+                )}
 
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/technologies" element={<TechnologyListPage />} />
-            <Route path="/roadmap-import" element={<RoadmapImport />} />
-            <Route path="/study-plan" element={<StudyPlan />} />
-            <Route path="/technology/:id" element={<TechnologyDetail />} />
-            <Route path="/add-technology" element={<AddTechnology />} />
-            <Route path="/statistics" element={<Statistics />} />
-            <Route 
-              path="/settings" 
-              element={
-                <ProtectedRoute>
-                  <Settings />
-                </ProtectedRoute>
-              } 
-            />
-            <Route path="/login" element={<Login />} />
-            <Route path="*" element={<Home />} />
-          </Routes>
-        </main>
-      </div>
-    </AuthProvider>
-  );
+                <main className="main-content">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/technologies" element={<TechnologyListPage />} />
+                        <Route path="/roadmap-import" element={<RoadmapImport />} />
+                        <Route path="/study-plan" element={<StudyPlan />} />
+                        <Route path="/technology/:id" element={<TechnologyDetail />} />
+                        <Route path="/add-technology" element={<AddTechnology />} />
+                        <Route path="/statistics" element={<Statistics />} />
+                        <Route
+                            path="/settings"
+                            element={
+                                <ProtectedRoute>
+                                    <Settings />
+                                </ProtectedRoute>
+                            }
+                        />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="*" element={<Home />} />
+                    </Routes>
+                </main>
+            </div>
+        </AuthProvider>
+    );
 }
 
 export default App;

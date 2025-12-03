@@ -1,288 +1,333 @@
 .technology-detail-page {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* 🔥 Хлебные крошки */
 .breadcrumbs {
-  margin-bottom: 30px;
-  font-size: 0.9em;
-  color: var(--text-muted);
+    margin-bottom: 30px;
+    font-size: 0.9em;
+    color: var(--text-muted);
 }
 
 .breadcrumbs a {
-  color: var(--accent-primary);
-  text-decoration: none;
+    color: var(--accent-primary);
+    text-decoration: none;
 }
 
 .breadcrumbs a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .breadcrumbs span {
-  margin: 0 8px;
+    margin: 0 8px;
 }
 
 /* 🔥 Заголовок */
 .detail-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 30px;
-  gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    gap: 20px;
 }
 
 .header-content h1 {
-  margin: 0 0 10px 0;
-  color: var(--text-primary);
-  font-size: 2.5em;
+    margin: 0 0 10px 0;
+    color: var(--text-primary);
+    font-size: 2.5em;
 }
 
 .status-badge-large {
-  display: inline-block;
-  padding: 8px 16px;
-  background: var(--surface-alt);
-  border: 2px solid var(--border-color);
-  border-radius: 25px;
-  font-weight: 600;
-  font-size: 1.1em;
+    display: inline-block;
+    padding: 8px 16px;
+    background: var(--surface-alt);
+    border: 2px solid var(--border-color);
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.1em;
 }
 
 .header-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 .btn-secondary {
-  background: var(--text-muted);
-  color: white;
+    background: var(--text-muted);
+    color: white;
 }
 
 .btn-secondary:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
+    opacity: 0.9;
+    transform: translateY(-2px);
 }
 
 /* 🔥 Контент */
 .detail-content {
-  background: var(--surface-color);
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: var(--card-shadow);
-  margin-bottom: 30px;
+    background: var(--surface-color);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 30px;
 }
 
 .info-section,
 .status-section,
 .notes-section,
 .meta-section {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .info-section:last-child,
 .status-section:last-child,
 .notes-section:last-child,
 .meta-section:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .info-section h2,
 .status-section h2,
 .notes-section h2,
 .meta-section h2 {
-  color: var(--text-primary);
-  margin: 0 0 15px 0;
-  font-size: 1.4em;
+    color: var(--text-primary);
+    margin: 0 0 15px 0;
+    font-size: 1.4em;
 }
 
 .description {
-  color: var(--text-muted);
-  line-height: 1.6;
-  font-size: 1.1em;
-  margin: 0;
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin: 0;
 }
 
 /* 🔥 Статусы */
 .status-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 .status-btn {
-  padding: 12px 20px;
-  border: 2px solid var(--border-color);
-  background: var(--surface-color);
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  flex: 1;
-  min-width: 140px;
+    padding: 12px 20px;
+    border: 2px solid var(--border-color);
+    background: var(--surface-color);
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 140px;
+    color: var(--text-primary);
 }
 
 .status-btn:hover {
-  border-color: var(--accent-primary);
-  transform: translateY(-2px);
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .status-btn.active {
-  border-color: var(--accent-primary);
-  background: var(--row-hover-bg);
-  color: var(--accent-primary);
-  font-weight: 600;
+    border-color: var(--accent-primary);
+    background: var(--accent-primary);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.deadline-field {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.deadline-field label {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.deadline-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.deadline-row input[type='date'] {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: var(--input-bg);
+    color: var(--text-primary);
+}
+
+.deadline-row input[type='date']:focus {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+    border-color: transparent;
+}
+
+.deadline-hint {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.error-message {
+    font-size: 0.85rem;
+    color: #ff6b6b;
 }
 
 /* 🔥 Заметки */
 .notes-textarea {
-  width: 100%;
-  padding: 15px;
-  border: 2px solid var(--border-color);
-  border-radius: 8px;
-  font-family: inherit;
-  font-size: 1em;
-  resize: vertical;
-  transition: border-color 0.3s ease;
-  background: var(--input-bg);
-  color: var(--text-primary);
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1em;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+    background: var(--input-bg);
+    color: var(--text-primary);
 }
 
 .notes-textarea:focus {
-  outline: none;
-  border-color: var(--accent-primary);
+    outline: none;
+    border-color: var(--accent-primary);
 }
 
 .notes-hint {
-  margin-top: 8px;
-  font-size: 0.9em;
-  color: var(--text-muted);
-  text-align: right;
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: var(--text-muted);
+    text-align: right;
 }
 
 /* 🔥 Мета-информация */
 .meta-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
 }
 
 .meta-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 12px;
-  background: var(--surface-alt);
-  border-radius: 6px;
-  border-left: 4px solid var(--accent-primary);
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    background: var(--surface-alt);
+    border-radius: 6px;
+    border-left: 4px solid var(--accent-primary);
 }
 
 .meta-item strong {
-  color: var(--text-primary);
+    color: var(--text-primary);
 }
 
 .status-text.not-started {
-  color: var(--status-pending-color);
-  font-weight: 600;
+    color: var(--status-pending-color);
+    font-weight: 600;
 }
 
 .status-text.in-progress {
-  color: var(--status-progress-color);
-  font-weight: 600;
+    color: var(--status-progress-color);
+    font-weight: 600;
 }
 
 .status-text.completed {
-  color: var(--status-done-color);
-  font-weight: 600;
+    color: var(--status-done-color);
+    font-weight: 600;
 }
 
 /* 🔥 Действия внизу */
 .detail-actions {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
 }
 
 /* 🔥 Не найдено */
 .not-found {
-  text-align: center;
-  padding: 60px 40px;
-  background: var(--surface-color);
-  border-radius: 12px;
-  box-shadow: var(--card-shadow);
+    text-align: center;
+    padding: 60px 40px;
+    background: var(--surface-color);
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
 }
 
 .not-found h1 {
-  color: var(--text-primary);
-  margin-bottom: 15px;
+    color: var(--text-primary);
+    margin-bottom: 15px;
 }
 
 .not-found p {
-  color: var(--text-muted);
-  margin-bottom: 25px;
-  font-size: 1.1em;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+    font-size: 1.1em;
 }
 
 /* 🔥 Адаптивность */
 @media (max-width: 768px) {
-  .technology-detail-page {
-    padding: 15px;
-  }
+    .technology-detail-page {
+        padding: 15px;
+    }
 
-  .detail-header {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 15px;
-  }
+    .detail-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
 
-  .header-content h1 {
-    font-size: 2em;
-  }
+    .header-content h1 {
+        font-size: 2em;
+    }
 
-  .header-actions {
-    justify-content: stretch;
-  }
+    .header-actions {
+        justify-content: stretch;
+    }
 
-  .header-actions .btn {
-    flex: 1;
-    text-align: center;
-    justify-content: center;
-  }
+    .header-actions .btn {
+        flex: 1;
+        text-align: center;
+        justify-content: center;
+    }
 
-  .detail-content {
-    padding: 20px;
-  }
+    .detail-content {
+        padding: 20px;
+    }
 
-  .status-actions {
-    flex-direction: column;
-  }
+    .status-actions {
+        flex-direction: column;
+    }
 
-  .status-btn {
-    min-width: auto;
-  }
+    .status-btn {
+        min-width: auto;
+    }
 
-  .meta-grid {
-    grid-template-columns: 1fr;
-  }
+    .meta-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .detail-actions {
-    flex-direction: column;
-  }
+    .detail-actions {
+        flex-direction: column;
+    }
 
-  .breadcrumbs {
-    font-size: 0.8em;
-  }
+    .breadcrumbs {
+        font-size: 0.8em;
+    }
 }
 
 @media (max-width: 480px) {
-  .header-content h1 {
-    font-size: 1.7em;
-  }
+    .header-content h1 {
+        font-size: 1.7em;
+    }
 
-  .info-section h2,
-  .status-section h2,
-  .notes-section h2,
-  .meta-section h2 {
-    font-size: 1.2em;
-  }
+    .info-section h2,
+    .status-section h2,
+    .notes-section h2,
+    .meta-section h2 {
+        font-size: 1.2em;
+    }
 }

@@ -1,91 +1,91 @@
 .technology-card {
-  background: white;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 15px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #ccc;
-  transition: all 0.3s ease;
-  cursor: pointer;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #ccc;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .technology-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
 }
 
 .card-header h3 {
-  margin: 0;
-  color: #333;
-  flex: 1;
+    margin: 0;
+    color: #333;
+    flex: 1;
 }
 
 .status-badge {
-  font-size: 0.8em;
-  padding: 4px 8px;
-  border-radius: 12px;
-  font-weight: 600;
-  margin-left: 10px;
-  white-space: nowrap;
+    font-size: 0.8em;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+    margin-left: 10px;
+    white-space: nowrap;
 }
 
 .card-description {
-  margin: 0 0 15px 0;
-  color: #666;
-  line-height: 1.5;
-  font-size: 0.9em;
+    margin: 0 0 15px 0;
+    color: #666;
+    line-height: 1.5;
+    font-size: 0.9em;
 }
 
 .card-footer {
-  margin-top: 10px;
-  text-align: right;
+    margin-top: 10px;
+    text-align: right;
 }
 
 .click-hint {
-  font-size: 0.8em;
-  color: #999;
-  font-style: italic;
+    font-size: 0.8em;
+    color: #999;
+    font-style: italic;
 }
 
 /* 🔥 Убираем курсор-указатель для секции заметок */
 .notes-section {
-  cursor: default;
+    cursor: default;
 }
 
 /* Стили для разных статусов */
 .status-not-started {
-  border-left-color: #ff6b6b;
-  background-color: #fff5f5;
+    border-left-color: #ff6b6b;
+    background-color: #fff5f5;
 }
 
 .status-in-progress {
-  border-left-color: #4ecdc4;
-  background-color: #f0fffe;
+    border-left-color: #4ecdc4;
+    background-color: #f0fffe;
 }
 
 .status-completed {
-  border-left-color: #45b7d1;
-  background-color: #f0f9ff;
+    border-left-color: #45b7d1;
+    background-color: #f0f9ff;
 }
 
 .status-not-started .status-badge {
-  background: #ff6b6b;
-  color: white;
+    background: #ff6b6b;
+    color: white;
 }
 
 .status-in-progress .status-badge {
-  background: #4ecdc4;
-  color: white;
+    background: #4ecdc4;
+    color: white;
 }
 
 .status-completed .status-badge {
-  background: #45b7d1;
-  color: white;
+    background: #45b7d1;
+    color: white;
 }

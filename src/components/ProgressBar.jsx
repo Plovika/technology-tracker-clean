@@ -20,8 +20,8 @@ function ProgressBar({
     };
 
     const getLabelText = () => {
-        if (normalizedPercentage === 100) return '✅ Завершено';
-        if (normalizedPercentage === 0) return '⏳ Не начато';
+        if (normalizedPercentage === 100) return ' Завершено';
+        if (normalizedPercentage === 0) return ' Не начато';
         return `${normalizedPercentage}%`;
     };
 

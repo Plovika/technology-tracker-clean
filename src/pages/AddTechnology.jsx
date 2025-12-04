@@ -108,7 +108,7 @@ function AddTechnology() {
 
             <div className="add-technology-form">
                 <div className="form-header">
-                    <h1>➕ Добавить новую технологию</h1>
+                    <h1> Добавить новую технологию</h1>
                     <p>Заполните информацию о технологии для отслеживания прогресса</p>
                 </div>
 
@@ -116,7 +116,7 @@ function AddTechnology() {
                     {/* 🔥 Название технологии */}
                     <div className="form-group">
                         <label htmlFor="title" className="form-label">
-                            📝 Название технологии *
+                             Название технологии *
                         </label>
                         <input
                             type="text"
@@ -133,7 +133,7 @@ function AddTechnology() {
                     {/* 🔥 Описание */}
                     <div className="form-group">
                         <label htmlFor="description" className="form-label">
-                            📖 Описание технологии *
+                            Описание технологии *
                         </label>
                         <textarea
                             id="description"
@@ -150,7 +150,7 @@ function AddTechnology() {
                     {/* 🔥 Статус */}
                     <div className="form-group">
                         <label htmlFor="status" className="form-label">
-                            📊 Начальный статус
+                             Начальный статус
                         </label>
                         <select
                             id="status"
@@ -159,9 +159,9 @@ function AddTechnology() {
                             onChange={handleChange}
                             className="form-select"
                         >
-                            <option value="not-started">⏳ Не начато</option>
-                            <option value="in-progress">🔄 В процессе</option>
-                            <option value="completed">✅ Завершено</option>
+                            <option value="not-started"> Не начато</option>
+                            <option value="in-progress"> В процессе</option>
+                            <option value="completed"> Завершено</option>
                         </select>
                         <div className="form-hint">
                             Выберите начальный статус изучения технологии
@@ -171,7 +171,7 @@ function AddTechnology() {
                     {/* 🔥 Заметки */}
                     <div className="form-group">
                         <label htmlFor="notes" className="form-label">
-                            💡 Начальные заметки
+                             Начальные заметки
                         </label>
                         <textarea
                             id="notes"
@@ -194,7 +194,7 @@ function AddTechnology() {
                             onClick={handleReset}
                             className="btn btn-secondary"
                         >
-                            🗑️ Очистить форму
+                            Очистить форму
                         </button>
 
                         <button
@@ -202,14 +202,14 @@ function AddTechnology() {
                             onClick={() => navigate('/technologies')}
                             className="btn btn-outline"
                         >
-                            ← Отмена
+                             Отмена
                         </button>
 
                         <button
                             type="submit"
                             className="btn btn-primary"
                         >
-                            ✅ Добавить технологию
+                             Добавить технологию
                         </button>
                     </div>
                 </form>

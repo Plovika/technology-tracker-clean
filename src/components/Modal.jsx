@@ -48,7 +48,7 @@ function Modal({ isOpen, onClose, title, children, size = 'medium', closeOnOverl
                     </div>
                 )}
 
-                {/* 🔥 Содержимое модалки */}
+                {/*  Содержимое модалки */}
                 <div className="modal-body">
                     {children}
                 </div>

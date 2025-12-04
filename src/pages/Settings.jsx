@@ -28,7 +28,7 @@ function Settings() {
 
             <div className="page-header">
                 <div className="header-content">
-                    <h1>⚙️ Настройки приложения</h1>
+                    <h1> Настройки приложения</h1>
                     <p>Управляйте предпочтениями и данными трекера</p>
                 </div>
                 <Link to="/statistics" className="btn btn-secondary">
@@ -44,7 +44,7 @@ function Settings() {
                     </header>
                     <p>Вы вошли как <strong>{user?.name || 'Администратор'}</strong>.</p>
                     <button className="btn btn-outline" onClick={logout}>
-                        🚪 Выйти
+                         Выйти
                     </button>
                 </section>
 
@@ -55,7 +55,7 @@ function Settings() {
                     <p>Можно быстро вернуть данные к начальному состоянию для тестирования.</p>
                     <div className="settings-actions">
                         <button className="btn btn-danger" onClick={handleReset}>
-                            ♻️ Сбросить к начальным данным
+                             Сбросить к начальным данным
                         </button>
                     </div>
                 </section>

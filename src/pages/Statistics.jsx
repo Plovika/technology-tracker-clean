@@ -10,19 +10,19 @@ function Statistics() {
     const progressData = useMemo(() => ([
         {
             key: 'completed',
-            label: '✅ Завершено',
+            label: ' Завершено',
             value: stats.completed,
             color: '#51cf66'
         },
         {
             key: 'in-progress',
-            label: '🔄 В процессе',
+            label: ' В процессе',
             value: stats.inProgress,
             color: '#4ecdc4'
         },
         {
             key: 'not-started',
-            label: '⏳ Не начато',
+            label: ' Не начато',
             value: stats.notStarted,
             color: '#ff6b6b'
         }
@@ -40,7 +40,7 @@ function Statistics() {
 
             <div className="page-header">
                 <div className="header-content">
-                    <h1>📈 Статистика обучения</h1>
+                    <h1> Статистика обучения</h1>
                     <p>Анализируйте прогресс и планируйте дальнейшее изучение технологий</p>
                 </div>
                 <Link to="/technologies" className="btn btn-primary">

@@ -11,7 +11,7 @@ function Navigation() {
         <nav className="main-navigation">
             <div className="nav-brand">
                 <Link to="/">
-                    <h2>🚀 Трекер технологий</h2>
+                    <h2> Трекер технологий</h2>
                 </Link>
             </div>
 
@@ -21,7 +21,7 @@ function Navigation() {
                         to="/"
                         className={location.pathname === '/' ? 'active' : ''}
                     >
-                        🏠 Главная
+                         Главная
                     </Link>
                 </li>
                 <li>
@@ -29,7 +29,7 @@ function Navigation() {
                         to="/technologies"
                         className={location.pathname === '/technologies' ? 'active' : ''}
                     >
-                        📚 Все технологии
+                         Все технологии
                     </Link>
                 </li>
                 <li>
@@ -37,7 +37,7 @@ function Navigation() {
                         to="/study-plan"
                         className={location.pathname === '/study-plan' ? 'active' : ''}
                     >
-                        🗓️ План обучения
+                         План обучения
                     </Link>
                 </li>
                 <li>
@@ -45,7 +45,7 @@ function Navigation() {
                         to="/roadmap-import"
                         className={location.pathname === '/roadmap-import' ? 'active' : ''}
                     >
-                        🗺️ Импорт
+                        Импорт
                     </Link>
                 </li>
                 <li>
@@ -53,7 +53,7 @@ function Navigation() {
                         to="/add-technology"
                         className={location.pathname === '/add-technology' ? 'active' : ''}
                     >
-                        ➕ Добавить технологию
+                         Добавить технологию
                     </Link>
                 </li>
                 <li>
@@ -61,7 +61,7 @@ function Navigation() {
                         to="/statistics"
                         className={location.pathname === '/statistics' ? 'active' : ''}
                     >
-                        📈 Статистика
+                         Статистика
                     </Link>
                 </li>
                 <li>
@@ -69,20 +69,20 @@ function Navigation() {
                         to="/settings"
                         className={location.pathname === '/settings' ? 'active' : ''}
                     >
-                        ⚙️ Настройки
+                         Настройки
                     </Link>
                 </li>
                 <li className="auth-link">
                     {isAuthenticated ? (
                         <button type="button" onClick={logout}>
-                            🚪 Выйти
+                             Выйти
                         </button>
                     ) : (
                         <Link
                             to="/login"
                             className={location.pathname === '/login' ? 'active' : ''}
                         >
-                            🔐 Войти
+                             Войти
                         </Link>
                     )}
                 </li>

@@ -92,7 +92,7 @@ function TechnologySearch({ onAddTechnology }) {
         <section className="technology-search">
             <header>
                 <div>
-                    <h2>🔍 Поиск технологий в API</h2>
+                    <h2> Поиск технологий в API</h2>
                     <p>Используйте debounce-поиск, чтобы найти нужную технологию и добавить её в трекер</p>
                 </div>
             </header>

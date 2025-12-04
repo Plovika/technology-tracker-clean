@@ -40,7 +40,7 @@ function TechnologyDetail() {
         return (
             <div className="page technology-detail-page">
                 <div className="not-found">
-                    <h1>🔍 Технология не найдена</h1>
+                    <h1> Технология не найдена</h1>
                     <p>Технология с ID {id} не существует.</p>
                     <Link to="/technologies" className="btn btn-primary">
                         ← Назад к списку технологий
@@ -119,9 +119,9 @@ function TechnologyDetail() {
     // 🔥 Текст статуса на русском
     const getStatusText = (status) => {
         const statusMap = {
-            'not-started': '⏳ Не начато',
-            'in-progress': '🔄 В процессе',
-            'completed': '✅ Завершено'
+            'not-started': ' Не начато',
+            'in-progress': ' В процессе',
+            'completed': ' Завершено'
         };
         return statusMap[status] || status;
     };
@@ -160,7 +160,7 @@ function TechnologyDetail() {
                             onClick={() => handleStatusChange(getNextStatus())}
                             className="btn btn-primary"
                         >
-                            🔄 Сменить статус
+                             Сменить статус
                         </button>
                         <Link to="/technologies" className="btn btn-secondary">
                             ← Назад
@@ -171,31 +171,31 @@ function TechnologyDetail() {
                 {/* 🔥 Основная информация */}
                 <div className="detail-content">
                     <div className="info-section">
-                        <h2>📖 Описание</h2>
+                        <h2> Описание</h2>
                         <p className="description">{technology.description}</p>
                     </div>
 
                     {/* 🔥 Статус и прогресс */}
                     <div className="status-section">
-                        <h2>📊 Статус изучения</h2>
+                        <h2> Статус изучения</h2>
                         <div className="status-actions">
                             <button
                                 onClick={() => handleStatusChange('not-started')}
                                 className={`status-btn ${technology.status === 'not-started' ? 'active' : ''}`}
                             >
-                                ⏳ Не начато
+                                 Не начато
                             </button>
                             <button
                                 onClick={() => handleStatusChange('in-progress')}
                                 className={`status-btn ${technology.status === 'in-progress' ? 'active' : ''}`}
                             >
-                                🔄 В процессе
+                                 В процессе
                             </button>
                             <button
                                 onClick={() => handleStatusChange('completed')}
                                 className={`status-btn ${technology.status === 'completed' ? 'active' : ''}`}
                             >
-                                ✅ Завершено
+                                 Завершено
                             </button>
                         </div>
 
@@ -233,7 +233,7 @@ function TechnologyDetail() {
 
                     {/* 🔥 Заметки */}
                     <div className="notes-section">
-                        <h2>📝 Мои заметки</h2>
+                        <h2> Мои заметки</h2>
                         <textarea
                             value={technology.notes || ''}
                             onChange={(e) => handleNotesChange(e.target.value)}
@@ -242,13 +242,13 @@ function TechnologyDetail() {
                             className="notes-textarea"
                         />
                         <div className="notes-hint">
-                            {technology.notes ? `💾 Сохранено (${technology.notes.length} символов)` : '✏️ Начните вводить заметки...'}
+                            {technology.notes ? ` Сохранено (${technology.notes.length} символов)` : '✏️ Начните вводить заметки...'}
                         </div>
                     </div>
 
                     {/* 🔥 Мета-информация */}
                     <div className="meta-section">
-                        <h2>ℹ️ Информация</h2>
+                        <h2> Информация</h2>
                         <div className="meta-grid">
                             <div className="meta-item">
                                 <strong>ID:</strong>
@@ -275,13 +275,13 @@ function TechnologyDetail() {
                 {/* 🔥 Действия внизу */}
                 <div className="detail-actions">
                     <Link to="/technologies" className="btn btn-secondary">
-                        ← Назад к списку
+                         Назад к списку
                     </Link>
                     <button
                         onClick={() => handleStatusChange(getNextStatus())}
                         className="btn btn-primary"
                     >
-                        🔄 Следующий статус
+                         Следующий статус
                     </button>
                 </div>
             </div>

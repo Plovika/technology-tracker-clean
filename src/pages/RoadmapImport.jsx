@@ -53,7 +53,7 @@ function RoadmapImport() {
         <div className="roadmap-import-page">
             <header className="page-header">
                 <div>
-                    <h1>🗺️ Импорт дорожных карт</h1>
+                    <h1> Импорт дорожных карт</h1>
                     <p>Подключите внешний API и автоматически добавьте технологии в трекер</p>
                 </div>
                 <button className="refresh-btn" onClick={refetch} disabled={loading}>
@@ -75,7 +75,7 @@ function RoadmapImport() {
                 </div>
 
                 <div className="import-results">
-                    <h2>🎯 Технологии из API</h2>
+                    <h2> Технологии из API</h2>
 
                     {loading && (
                         <div className="app-loading compact">

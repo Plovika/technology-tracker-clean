@@ -47,9 +47,9 @@ function TechnologyCard({ id, title, description, status, notes, onStatusChange,
 
 function getStatusText(status) {
     const statusMap = {
-        'not-started': '⏳ Не начато',
-        'in-progress': '🔄 В процессе',
-        'completed': '✅ Завершено'
+        'not-started': ' Не начато',
+        'in-progress': ' В процессе',
+        'completed': ' Завершено'
     };
     return statusMap[status] || status;
 }

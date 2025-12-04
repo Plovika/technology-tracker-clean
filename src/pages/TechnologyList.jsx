@@ -47,9 +47,9 @@ function TechnologyList() {
     // 🔥 Статусы на русском
     const getStatusText = (status) => {
         const statusMap = {
-            'not-started': '⏳ Не начато',
-            'in-progress': '🔄 В процессе',
-            'completed': '✅ Завершено'
+            'not-started': ' Не начато',
+            'in-progress': ' В процессе',
+            'completed': ' Завершено'
         };
         return statusMap[status] || status;
     };
@@ -68,11 +68,11 @@ function TechnologyList() {
         <div className="page technology-list-page">
             <div className="page-header">
                 <div className="header-content">
-                    <h1>📚 Все технологии</h1>
+                    <h1> Все технологии</h1>
                     <p>Управляйте вашим прогрессом изучения технологий</p>
                 </div>
                 <Link to="/add-technology" className="btn btn-primary">
-                    ➕ Добавить технологию
+                     Добавить технологию
                 </Link>
             </div>
 
@@ -82,7 +82,7 @@ function TechnologyList() {
                     className="btn btn-primary"
                     style={{ marginBottom: '20px' }}
                 >
-                    📝 Массовое изменение статусов
+                    Массовое изменение статусов
                 </button>
             </div>
 
@@ -101,21 +101,21 @@ function TechnologyList() {
                     className="status-toggle-btn-all"
                     onClick={() => handleUpdateAll('not-started')}
                 >
-                    ⏳ Все «Не начато»
+                     Все «Не начато»
                 </button>
                 <button
                     type="button"
                     className="status-toggle-btn-all"
                     onClick={() => handleUpdateAll('in-progress')}
                 >
-                    🔄 Все «В процессе»
+                     Все «В процессе»
                 </button>
                 <button
                     type="button"
                     className="status-toggle-btn-all"
                     onClick={() => handleUpdateAll('completed')}
                 >
-                    ✅ Все «Завершено»
+                     Все «Завершено»
                 </button>
             </div>
 
@@ -165,14 +165,14 @@ function TechnologyList() {
 
                         {tech.notes && (
                             <div className="tech-notes-preview">
-                                <strong>📝 Заметки:</strong>
+                                <strong> Заметки:</strong>
                                 <p>{tech.notes.length > 100 ? tech.notes.substring(0, 100) + '...' : tech.notes}</p>
                             </div>
                         )}
 
                         <div className="card-footer">
                             <Link to={`/technology/${tech.id}`} className="btn-link">
-                                🔍 Подробнее →
+                                 Подробнее
                             </Link>
                         </div>
                     </div>
@@ -182,11 +182,11 @@ function TechnologyList() {
             {/* 🔥 Состояние пустого списка */}
             {technologies.length === 0 && (
                 <div className="empty-state">
-                    <div className="empty-icon">📚</div>
+                    <div className="empty-icon"></div>
                     <h3>Технологий пока нет</h3>
                     <p>Начните добавлять технологии для отслеживания вашего прогресса</p>
                     <Link to="/add-technology" className="btn btn-primary">
-                        ➕ Добавить первую технологию
+                         Добавить первую технологию
                     </Link>
                 </div>
             )}

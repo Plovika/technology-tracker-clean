@@ -4,9 +4,9 @@ import './BulkStatusEditor.css';
 import { useNotifier } from '../context/NotificationContext.jsx';
 
 const STATUS_OPTIONS = [
-    { value: 'not-started', label: '⏳ Не начато' },
-    { value: 'in-progress', label: '🔄 В процессе' },
-    { value: 'completed', label: '✅ Завершено' }
+    { value: 'not-started', label: ' Не начато' },
+    { value: 'in-progress', label: ' В процессе' },
+    { value: 'completed', label: ' Завершено' }
 ];
 
 function BulkStatusEditor({ technologies, onApply }) {

@@ -20,7 +20,7 @@ function ProgressHeader({ technologies, onExport, onImport }) {
 
     return (
         <div className="progress-header">
-            <h2>📊 Статистика прогресса</h2>
+            <h2> Статистика прогресса</h2>
 
             <div className="progress-main">
                 <div className="progress-visual">
